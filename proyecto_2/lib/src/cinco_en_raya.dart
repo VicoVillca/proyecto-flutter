@@ -11,9 +11,12 @@ class CincoEnRaya extends StatefulWidget{
 }
 
 class _CincoEnRaya extends State<CincoEnRaya>{
+  //Lista de variables
   int row=12;
+  
   List<List<int>> tablero =  [[]];
   List<List<bool>> vista =  [[false]];
+  //funciones Autowireds
   @override
   Widget build(Object context) {
     // TODO: implement build
@@ -224,7 +227,6 @@ class _CincoEnRaya extends State<CincoEnRaya>{
   }
 
   void VerificarSiGano(){
-    int nro =0;
     int sinMarcar=0;
     for(int i=1;i<row;i++){
       for(int j=1;j<row;j++){
@@ -242,7 +244,7 @@ class _CincoEnRaya extends State<CincoEnRaya>{
     }*/
     print("nro sin marcar $sinMarcar");
     
-    if(nro==row){
+    if(sinMarcar==row){
       //gano
       alerta(context, "Ganaste!!!");
     }
